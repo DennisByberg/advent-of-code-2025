@@ -1,12 +1,12 @@
-# --- Day 1: Secret Entrance - Part 1 ---
+from typing import Literal
 
 
-def calculate_zero_counter(rotations, start=50):
+def calculate_zero_counter(rotations, start=50) -> int:
     zeroCounter = 0
-    dialPointer = start
+    dialPointer: int = start
 
     for rotation in rotations:
-        direction = rotation[0]
+        direction: Literal["L", "R"] = rotation[0]
         number = int(rotation[1:])
 
         if direction == "R":
@@ -30,6 +30,6 @@ def calculate_zero_counter(rotations, start=50):
 
 if __name__ == "__main__":
     with open("input.txt", "r") as file:
-        rotations = [line.strip() for line in file]
+        rotations: list[str] = [line.strip() for line in file]
 
     print(calculate_zero_counter(rotations))
