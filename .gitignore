@@ -21,11 +21,13 @@ htmlcov/
 .tox/
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
+
+# GitHub
+.github/instructions/
 
 # OS
 .DS_Store
